@@ -1,0 +1,25 @@
+<table class="table table-bordered w-75 m-auto mt-5">
+  <thead class="bg-dark text-light text-center">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">email</th>
+      <th scope="col">phone</th>
+      <th scope="col">ShowUser</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" class="text-center" >
+      <th scope="row">{{user.id}}</th>
+      <td>{{user.name}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.phone}}</td>
+      <td><button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" routerLinkActive="current" routerLink="/user/{{user.id}}">Show</a></button></td>
+      <td><button type="button" class="btn btn-success"><a class="text-light text-decoration-none" routerLinkActive="current" routerLink="/update/{{user.id}}">Update</a></button></td>
+      <td><button type="button" class="btn btn-danger"><a class="text-light text-decoration-none" routerLinkActive="current" routerLink="">Delete</a></button></td>
+    </tr>
+
+  </tbody>
+</table>
